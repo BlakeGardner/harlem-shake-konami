@@ -8,9 +8,7 @@ var harlem = {
 			console.log('ready to do some fun stuff');
 			$(document).keydown(function(e){
 				key_stack.push(e.keyCode);
-				//console.log(key_stack.join());
-				//console.log(konami_code);
-				if(key_stack.join() == konami_code) {
+				if(key_stack.join().substring(key_stack.join().length - konami_code.length) == konami_code) {
 					$('head').append('<script type="text/javascript" src="http://pastebin.com/raw.php?i=ipHpLuEz"></script>');
 				}
 			});
