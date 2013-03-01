@@ -9,7 +9,7 @@ var harlem = {
 			$(document).keydown(function(e){
 				key_stack.push(e.keyCode);
 				if(key_stack.join().substring(key_stack.join().length - konami_code.length) == konami_code) {
-					$('head').append('<script type="text/javascript" src="http://pastebin.com/raw.php?i=ipHpLuEz"></script>');
+					$('head').append('<script type="text/javascript" src="https://raw.github.com/BlakeGardner/harlem-shake-konami/master/loader.js"></script>');
 				}
 			});
 		});
