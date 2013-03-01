@@ -103,12 +103,12 @@
 	var t=30;
 	var n=350;
 	var r=350;
-	var i="//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var i="https://github.com/BlakeGardner/harlem-shake-konami/raw/master/harlem-shake.mp3";
 	var s="mw-harlem_shake_me";
 	var o="im_first";
 	var u=["im_drunk","im_baked","im_trippin","im_blown"];
 	var a="mw-strobe_light";
-	var f="//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var f="https://raw.github.com/BlakeGardner/harlem-shake-konami/master/harlem-shake-style.css";
 	var l="mw_added_css";
 	var b=g();
 	var w=y();
