@@ -1,29 +1,16 @@
 
+
 konami_code = '38,38,40,40,37,39,37,39,66,65';
 key_stack = new Array();
 
-var harlem = {
-	shake: function(){
-		$(document).ready(function(){
-			console.log('ready to do some fun stuff');
-			$(document).keydown(function(e){
-				key_stack.push(e.keyCode);
-				if(key_stack.join().substring(key_stack.join().length - konami_code.length) == konami_code) {
-					$('head').append('<script type="text/javascript" src="https://raw.github.com/BlakeGardner/harlem-shake-konami/master/loader.js"></script>');
-				}
-			});
-		});
+window.onkeydown = function(e) {
+	key_stack.push(e.keyCode);
+	if(key_stack.join().substring(key_stack.join().length - konami_code.length) == konami_code) {
+		shake_js = document.createElement('script');
+		shake_js.type = 'text/javascript';
+		shake_js.async = true;
+		shake_js.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'raw.github.com/BlakeGardner/harlem-shake-konami/master/loader.js';
+		document.getElementsByTagName('head')[0].appendChild(shake_js);
 	}
-};
-
-
-if (typeof jQuery == 'undefined') {
-	jq = document.createElement('script');
-	jq.type = 'text/javascript';
-	jq.async = true;
-	jq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
-	jq.onload=harlem.shake;
-	document.getElementsByTagName('head')[0].appendChild(jq);
-} else {
-	harlem.shake();
 }
+
